@@ -1,11 +1,18 @@
-const port = 2000; // localhost:2000
-const serverPort = 8080; //WebSocket server: "wss://localhost:1000" NOT https/http
-const SERVER = require('ws');
-const wss = new SERVER.Server({port:serverPort});
-const http = require('http');
-function server(req,res){
-	res.write('Websocket server is: wss://localhost:8080');
-	res.end();
+function server(WS,req){
+	ws.on('connection', function(){console.log('connected');});
+	ws.on('close', function(){console.log('disconnected');});
 }
 
-http.createServer(server).listen(port);
+function run(){
+	console.log(`Success`); 
+}
+
+const port = 8080; // localhost:8080
+const express = require('express');
+const Ws = require('express-ws');
+const app = express();
+Ws(app);
+
+app.ws(server);
+app.use(express.static('public'));
+app.listen(port,run);
