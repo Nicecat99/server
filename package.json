@@ -1,5 +1,5 @@
 {
-  "name": "@nicecat99/github-package-demo",
+  "name": "@nicecat99/server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "repository": {
-  	"url": "git://github.com/nicecat99/github-package-demo/test.git"
+  	"url": "git://github.com/nicecat99/server/test.git"
   },
   "license": "ISC"
 }
