@@ -13,6 +13,6 @@ const Ws = require('express-ws');
 const app = express();
 Ws(app);
 
-app.ws(server);
+app.ws('/server', server);
 app.use(express.static('public'));
 app.listen(port,run);
