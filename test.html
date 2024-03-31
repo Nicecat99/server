@@ -1,0 +1,9 @@
+<textarea id="Text"></textarea>
+<button onclick = "e.send(Text.textContent)">Send</button>
+<span id="write"></span>
+<script>
+  let e = new WebSocket('wss://localhost:8080/server');
+  e.onmessage = function(dat){
+    write.innerText += dat.data + '\n';
+  };
+</script>
